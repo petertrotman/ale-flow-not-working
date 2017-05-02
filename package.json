@@ -1,0 +1,30 @@
+{
+  "name": "ale-flow-not-working",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "flow": "flow",
+    "eslint": "eslint",
+    "babel": "babel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petertrotman/ale-flow-not-working.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petertrotman/ale-flow-not-working/issues"
+  },
+  "homepage": "https://github.com/petertrotman/ale-flow-not-working#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^3.19.0",
+    "flow-bin": "^0.45.0"
+  }
+}
