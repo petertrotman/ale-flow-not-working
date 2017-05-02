@@ -105,8 +105,6 @@ $ /home/peter/dev/src/github.com/petertrotman/ale-flow-not-working/node_modules/
 {"flowVersion":"0.45.0","errors":[{"kind":"infer","level":"error","message":[{"context":"console.log(square('hello'));","descr":"string","type":"Blame","loc":{"source":"/home/peter/dev/src/github.com/petertrotman/ale-flow-not-working/index.js","type":"SourceFile","start":{"line":9,"column":20,"offset":135},"end":{"line":9,"column":26,"offset":142}},"path":"/home/peter/dev/src/github.com/petertrotman/ale-flow-not-working/index.js","line":9,"endline":9,"start":20,"end":26},{"context":null,"descr":"This type is incompatible with the expected param type of","type":"Comment","path":"","line":0,"endline":0,"start":1,"end":0},{"context":"function square(n: number) {","descr":"number","type":"Blame","loc":{"source":"/home/peter/dev/src/github.com/petertrotman/ale-flow-not-working/index.js","type":"SourceFile","start":{"line":4,"column":20,"offset":61},"end":{"line":4,"column":25,"offset":67}},"path":"/home/peter/dev/src/github.com/petertrotman/ale-flow-not-working/index.js","line":4,"endline":4,"start":20,"end":25}]}],"passed":false}% 
 ```
 
-So error message is there, but ALE isn't making use of it. My guess is because...
-
 ```
 $ echo $?
 0
@@ -114,11 +112,4 @@ $ echo $?
 
 ## Conclusion
 
-Flow returns a 0 status when an error is identified. This makes sense to me because Flow runs fine - so no errors, but in running fine it identified an error.
-
-However, when running `:ALEInfo` after `:ALELint` with `:let g:ale_history_log_output = 1` (as shown above), it does state that there is `<<<NO OUTPUT RETURNED>>>` which confuses me, because when running the command manually it does produce output. I wonder then if there is some configuration that I haven't done properly?
-
-So my guess is that ALE is ignoring the Flow output because it returns 0. I had a quick look and I can't find a Flow CLI option to return an error if errors are found.
-
-I wonder if this worked in the past but Flow has changed its output to something that no longer works with ALE. I'm very keen for this to get this working as soon as possible. Thoughts?
-
+Running the commands manually does produce the correct output. However, `:ALEInfo` after `:let g:ale_history_log_output = 1` and `:ALELint` says that there is `<<<NO OUTPUT RETURNED>>>`. I don't know where else to go with this - any ideas?
