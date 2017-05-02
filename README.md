@@ -1,6 +1,6 @@
-* A demonstration project to show that Vim ALE does not correctly use the JavaScript Flow linter.
+# A demonstration project to show that Vim ALE does not correctly use the JavaScript Flow linter.
 
-** Steps to reproduce:
+## Steps to reproduce:
 
 - Clone the repository
 - `npm install`
@@ -9,7 +9,10 @@
 - Note that there should be an error from Flow when we call `square('hello')`
 - `npm run flow` -> Error is correctly identified, but not displayed in Vim with ALE
 
-** ALEInfo
+## ALEInfo
+
+```
+:ALEInfo
 
 Current Filetype: javascript.jsx
 Available Linters: ['eslint', 'flow', 'jscs', 'jshint', 'standard', 'xo']
@@ -63,8 +66,9 @@ Command History:
 (finished - exit code 0) ['/usr/bin/zsh', '-c', '/home/peter/dev/src/github.com/petertrotman/ale-flow-not-working/node_modules/.bin/flow check-contents --respect-pragma --json --from ale /home/peter/dev/src/github.com/petertrotman/ale-flow-not-working/index.js < /tmp/vWhD7mJ/3/index
 .js']
 <<<NO OUTPUT RETURNED>>>
+```
 
-** Manually running commands
+## Manually running commands
 
 1. ESLint - With `/* eslint-disable no-console */`
 
@@ -108,7 +112,7 @@ $ echo $?
 0
 ```
 
-** Conclusion
+## Conclusion
 
 Flow returns a 0 status when an error is identified. This makes sense to me because Flow runs fine - so no errors, but in running fine it identified an error.
 
