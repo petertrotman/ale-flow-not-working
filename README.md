@@ -1,4 +1,4 @@
-# A demonstration project to show that Vim ALE does not correctly use the JavaScript Flow linter.
+I have a problem where Flow (@0.45.0) does not seem to be working within ALE but works fine outside of ALE. I have created a demonstration repository here: https://github.com/petertrotman/ale-flow-not-working .
 
 ## Steps to reproduce:
 
@@ -112,4 +112,6 @@ $ echo $?
 
 ## Conclusion
 
-Running the commands manually does produce the correct output. However, `:ALEInfo` after `:let g:ale_history_log_output = 1` and `:ALELint` says that there is `<<<NO OUTPUT RETURNED>>>`. I don't know where else to go with this - any ideas?
+Running the commands manually does produce the correct output. However, `:ALEInfo` after `:let g:ale_history_log_output = 1` and `:ALELint` says that there is `<<<NO OUTPUT RETURNED>>>`. I have checked and when removing the `/* eslint-disable no-console */` the output does appear as expected in `:ALEInfo` so there seems to be something weird going in with Flow in particular.
+
+It's possible I've missed some configuration somewhere but I have looked through the ALE and Flow docs for some enlightenment but nothing is forthcoming. I don't know where else to go with this - any ideas?

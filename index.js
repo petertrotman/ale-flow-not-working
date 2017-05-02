@@ -1,6 +1,5 @@
 // @flow
 
-/* eslint-disable no-console */
 function square(n: number) {
     return n * n;
 }
