@@ -120,5 +120,5 @@ However, when running `:ALEInfo` after `:ALELint` with `:let g:ale_history_log_o
 
 So my guess is that ALE is ignoring the Flow output because it returns 0. I had a quick look and I can't find a Flow CLI option to return an error if errors are found.
 
-Thoughts? I wonder if this worked in the past but Flow has changed its output to something that no longer works with ALE. I'm very keen for this to get this working as soon as possible. Thoughts?
+I wonder if this worked in the past but Flow has changed its output to something that no longer works with ALE. I'm very keen for this to get this working as soon as possible. Thoughts?
 
